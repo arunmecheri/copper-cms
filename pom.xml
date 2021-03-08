@@ -128,7 +128,6 @@
 		<module>copper-server-repo</module>
 		<module>copper-server-impl</module>
 		<module>copper-server-ldap</module>
-		<module>chemistry-opencmis-test-tck</module>
 		<module>copper-server-mongo</module>
 		<module>external</module>
 		<module>copper-server</module>
