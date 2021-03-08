@@ -22,9 +22,7 @@ jobs:
       with:
         java-version: 11.0.x
     - name: Package with maven
-      run: mvn compile package
-      with:
-        maven-options: "-Xmx3072m -Dmaven.test.skip=true"
+      run: mvn compile package -Xmx3072m -Dmaven.test.skip=true
     - name: Download ShiftLeft CLI
       run: |
         curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
