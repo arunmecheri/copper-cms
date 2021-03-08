@@ -36,6 +36,6 @@ jobs:
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
       id: extract_branch
     - name: NextGen Static Analysis
-      run: ${GITHUB_WORKSPACE}/sl analyze --app shiftleft-java-demo --sca --tag branch=${{ github.head_ref || steps.extract_branch.outputs.branch }} --java --cpg copper-server/target/copper-server-1.15.2.war
+      run: ${GITHUB_WORKSPACE}/sl analyze --app copper-cms --sca --tag branch=${{ github.head_ref || steps.extract_branch.outputs.branch }} --java --cpg copper-server/target/copper-server-1.15.2.war
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
